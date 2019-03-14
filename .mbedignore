@@ -1,0 +1,8 @@
+*/examples/common/src/*
+*/examples/freertos_linux/*
+*/src/bsp/platform/dummy/*
+*/src/bsp/platform/posix/*
+*/src/bsp/platform/freertos-posix/*
+*/src/bsp/platform/zephyr/*
+*/src/bsp/tls/mbedtls/*
+*/src/bsp/tls/wolfssl/*

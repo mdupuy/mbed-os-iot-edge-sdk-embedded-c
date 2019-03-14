@@ -1,5 +1,6 @@
 #include "mbed.h"
 #include "mbed_trace.h"
+#include "ntp-client/NTPClient.h"
 
 /* https://os.mbed.com/docs/mbed-os/v5.11/apis/tlssocket.html */
 
@@ -44,16 +45,33 @@ int main(void)
 
     NetworkInterface *net = NetworkInterface::get_default_instance();
 
-    if (!net) {
-        printf("Error! No network inteface found.\n");
-        return 0;
-    }
-
     printf("Connecting to network\n");
     result = net->connect();
     if (result != 0) {
         printf("Error! net->connect() returned: %d\n", result);
         return result;
+    }
+
+    printf("Client IP Address is %s\r\n", net->get_ip_address());
+    
+    NTPClient ntp(net);
+    time_t timestamp = ntp.get_timestamp();
+    if (timestamp < 0) {
+            printf("An error occurred when getting the time. Code: %ld\r\n", timestamp);
+    } else {
+            printf("Current time is %s\r\n", ctime(&timestamp));
+            printf("localtime time is %s\r\n", localtime(&timestamp));
+            set_time(timestamp);
+    }
+    
+
+    time_t seconds = time(NULL);
+    printf("Time as seconds since January 1, 1970 = %u\n", (unsigned int)seconds);
+    printf("Time %s\n", ctime(&seconds));
+
+    if (!net) {
+        printf("Error! No network inteface found.\n");
+        return 0;
     }
 
     TLSSocket *socket = new TLSSocket;

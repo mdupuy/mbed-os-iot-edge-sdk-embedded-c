@@ -74,13 +74,15 @@ def buildStep(target, compilerLabel, toolchain) {
   }
 }
 
-def IOTC_TLS_LIB_MBEDTLS
-def MBEDTLS_PLATFORM_MEMORY
+// translated from Google Make system
+// make MD=  TARGET=mbed-static-debug CONFIG=memory_fs-mbed_platform-tls_socket IOTC_BSP_PLATFORM=mbed IOTC_BSP_TLS=mbedos
 def IOTC_DEBUG_OUTPUT=1
 def IOTC_DEBUG_ASSERT=1
 def IOTC_DEBUG_EXTRA_INFO=1
-def IOTC_FS_MEMORY
-def IOTC_PLATFORM_BASE_POSIX
+def IOTC_FS_MEMORY  
+def IOTC_PLATFORM_BASE_DUMMY  
+def IOTC_NO_TLS_LAYER  
+def IOTC_BSP_IO_NET_TLS_SOCKET  
 def IOTC_PLATFORM_IS_MBED
 def IOTC_MULTI_LEVEL_DIRECTORY_STRUCTURE
 def IOTC_LIBCRYPTO_AVAILABLE
@@ -103,7 +105,7 @@ def DEVICE_RTC=1
 def COMPONENT_PSA_SRV_EMUL=1 
 def DEVICE_SERIAL_ASYNCH=1 
 def __CMSIS_RTOS 
-def MBED_BUILD_TIMESTAMP=1548998225.02 
+//def MBED_BUILD_TIMESTAMP=1548998225.02 
 def TOOLCHAIN_ARMC6 
 def FSL_RTOS_MBED 
 def TARGET_KPSDK_MCUS 
@@ -154,10 +156,10 @@ def ARM_MATH_CM4 -nostdinc  -c --target=arm-arm-none-eabi -mthumb -g -O1
 def MULADDC_CANNOT_USE_R7 -fdata-sections -fno-exceptions  
 def _LIBCPP_EXTERN_TEMPLATE(...)= -fshort-enums -fshort-wchar -mcpu=cortex-m4 -mfpu=fpv4-sp
 def 16 -mfloat-abi=hard 
-def __ASSERT_MSG -std=gnu99 
-def MBED_ROM_START=0x0 
-def MBED_ROM_SIZE=0x100000 
-def MBED_RAM_START=0x20000000 
-def MBED_RAM_SIZE=0x30000 
-def MBED_RAM1_START=0x1fff0000 
-def MBED_RAM1_SIZE=0x10000
+//def __ASSERT_MSG -std=gnu99 
+//def MBED_ROM_START=0x0 
+//def MBED_ROM_SIZE=0x100000 
+//def MBED_RAM_START=0x20000000 
+//def MBED_RAM_SIZE=0x30000 
+//def MBED_RAM1_START=0x1fff0000 
+//def MBED_RAM1_SIZE=0x10000
