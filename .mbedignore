@@ -6,3 +6,4 @@
 */src/bsp/platform/zephyr/*
 */src/bsp/tls/mbedtls/*
 */src/bsp/tls/wolfssl/*
+*/src/libiotc/event_dispatcher/*test.cc

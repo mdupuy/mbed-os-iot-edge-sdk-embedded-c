@@ -1,0 +1,10 @@
+{
+    "name": "iotc",
+    "config": {
+        "debug-output": {
+            "macro_name": "IOTC_DEBUG_OUTPUT",
+            "value": 1
+        },
+        "memory-limiter-application-memory-limit": 524288
+    }
+}

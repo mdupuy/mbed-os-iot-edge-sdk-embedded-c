@@ -4,5 +4,21 @@
             "platform.stdio-convert-newlines": true,
             "target.network-default-interface-type": "ETHERNET"
         }
-    }
+    },
+    "macros": ["IOTC_MEMORY_LIMITER_APPLICATION_MEMORY_LIMIT=524288"],
+    "macros": ["IOTC_MEMORY_LIMITER_SYSTEM_MEMORY_LIMIT=2024"],
+    "macros": ["IOTC_DEBUG_OUTPUT=1"],
+    "macros": ["IOTC_DEBUG_ASSERT=1"],
+    "macros": ["IOTC_DEBUG_EXTRA_INFO=1"],
+    "macros": ["IOTC_FS_MEMORY"],  
+    "macros": ["IOTC_PLATFORM_BASE_DUMMY"],  
+    "macros": ["IOTC_NO_TLS_LAYER"],  
+    "macros": ["IOTC_BSP_IO_NET_TLS_SOCKET"],  
+    "macros": ["IOTC_PLATFORM_IS_MBED"],
+    "macros": ["IOTC_MULTI_LEVEL_DIRECTORY_STRUCTURE"],
+    "macros": ["IOTC_LIBCRYPTO_AVAILABLE"],
+    "macros": ["IOTC_MULTI_LEVEL_DIRECTORY_STRUCTURE"],
+    "macros": ["IOTC_DEBUG_OUTPUT=1"],
+    "macros": ["IOTC_BSP_PLATFORM"],
+    "macros": ["IOTC_BSP_TLS=mbedos"]
 }
