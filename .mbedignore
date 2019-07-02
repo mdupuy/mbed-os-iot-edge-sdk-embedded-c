@@ -6,4 +6,17 @@
 */src/bsp/platform/zephyr/*
 */src/bsp/tls/mbedtls/*
 */src/bsp/tls/wolfssl/*
+*/src/libiotc/platform/posix/*
+*/src/libiotc/platform/dummy/*
 */src/libiotc/event_dispatcher/*test.cc
+*/src/libiotc/iotc_jwt_test.cc
+*/src/libiotc/iotc_test.cc
+*/src/tests/fuzztests/iotc_fuzztest_mqtt_*.cpp
+*/src/tests/itests/iotc_itests.c
+*/src/tests/iotc_openssl_utils.cc
+*/src/tests/tools/iotc_libiotc_driver/iotc_libiotc_driver.c
+*/src/tests/utests/iotc_utest_bsp_crypto_ecc.c
+*/src/tests/tools/iotc_libiotc_driver/iotc_driver_logic_layer.c
+*/src/tests/utests/iotc_utest_fs_posix.c
+*/src/tests/utests/iotc_utests.c
+*/third_party/*

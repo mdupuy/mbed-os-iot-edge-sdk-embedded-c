@@ -19,6 +19,6 @@
     "macros": ["IOTC_LIBCRYPTO_AVAILABLE"],
     "macros": ["IOTC_MULTI_LEVEL_DIRECTORY_STRUCTURE"],
     "macros": ["IOTC_DEBUG_OUTPUT=1"],
-    "macros": ["IOTC_BSP_PLATFORM"],
+    "macros": ["IOTC_BSP_PLATFORM=mbed"],
     "macros": ["IOTC_BSP_TLS=mbedos"]
 }
